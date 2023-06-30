@@ -22,6 +22,7 @@ try {
   mongoose.connect(
     'mongodb+srv://linhvh203:Linhdz112003%40@portfolio.qifyxg6.mongodb.net/?retryWrites=true&w=majority'
   );
+  console.log('successfully');
 } catch (error) {
   console.log(error);
 }
