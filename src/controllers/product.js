@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import joi from 'joi';
-import Product from '../models/product';
-import Category from '../models/category';
+import Product from '../models/product.js';
+import Category from '../models/category.js';
 
 const productSchema = joi.object({
   name: joi.string().required(),

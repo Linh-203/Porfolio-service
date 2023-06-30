@@ -1,6 +1,6 @@
 import express from 'express';
-import productRouter from './routes/product';
-import categoryRouter from './routes/category';
+import productRouter from './routes/product.js';
+import categoryRouter from './routes/category.js';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -31,4 +31,7 @@ const connectDB = async () => {
 connectDB();
 // mongodb+srv://linhvh203:Linhdz112003%40@portfolio.qifyxg6.mongodb.net/?retryWrites=true&w=majority
 
-export const viteNodeApp = app;
+// export const viteNodeApp = app;
+app.listen(8080, () => {
+  console.log('listening on port 8080');
+});

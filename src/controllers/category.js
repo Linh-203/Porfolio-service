@@ -1,6 +1,6 @@
 import joi from 'joi';
-import Category from '../models/category';
-import Product from '../models/product';
+import Category from '../models/category.js';
+import Product from '../models/product.js';
 
 const categorySchema = joi.object({
   name: joi.string().required(),
