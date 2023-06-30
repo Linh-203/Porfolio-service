@@ -18,9 +18,13 @@ app.use('/api', productRouter);
 app.use('/api', categoryRouter);
 
 // connect to db
-mongoose.connect(
-  'mongodb+srv://linhvh203:Linhdz112003%40@portfolio.qifyxg6.mongodb.net/?retryWrites=true&w=majority'
-);
+try {
+  mongoose.connect(
+    'mongodb+srv://linhvh203:Linhdz112003%40@portfolio.qifyxg6.mongodb.net/?retryWrites=true&w=majority'
+  );
+} catch (error) {
+  console.log(error);
+}
 // mongodb+srv://linhvh203:Linhdz112003%40@portfolio.qifyxg6.mongodb.net/?retryWrites=true&w=majority
 
 export const viteNodeApp = app;

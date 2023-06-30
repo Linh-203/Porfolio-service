@@ -9,7 +9,7 @@ const productSchema = new mongoose.Schema(
       minLength: 3,
     },
     year: {
-      type: Number,
+      type: String,
     },
     desc: {
       type: String,
@@ -17,6 +17,14 @@ const productSchema = new mongoose.Schema(
       minLength: 3,
     },
     image: {
+      type: String,
+      require: true,
+    },
+    source_code_link: {
+      type: String,
+      require: true,
+    },
+    demo_link: {
       type: String,
       require: true,
     },
