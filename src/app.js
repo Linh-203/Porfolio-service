@@ -18,14 +18,17 @@ app.use('/api', productRouter);
 app.use('/api', categoryRouter);
 
 // connect to db
-try {
-  mongoose.connect(
-    'mongodb+srv://linhvh203:Linhdz112003%40@portfolio.qifyxg6.mongodb.net/?retryWrites=true&w=majority'
-  );
-  console.log('successfully');
-} catch (error) {
-  console.log(error);
-}
+const connectDB = async () => {
+  try {
+    await mongoose.connect(
+      'mongodb+srv://linhvh203:Linhdz112003%40@portfolio.qifyxg6.mongodb.net/?retryWrites=true&w=majority'
+    );
+    console.log('successfully');
+  } catch (error) {
+    console.log(error);
+  }
+};
+connectDB();
 // mongodb+srv://linhvh203:Linhdz112003%40@portfolio.qifyxg6.mongodb.net/?retryWrites=true&w=majority
 
 export const viteNodeApp = app;
